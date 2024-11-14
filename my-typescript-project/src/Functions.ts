@@ -1,4 +1,5 @@
 // Call Signature
+// function example 1
 type describablefunction = {
     description: string;
     (somearg: number): boolean;
@@ -8,15 +9,14 @@ type describablefunction = {
   }
   a.description = "default implementation";
   function myfunc(fn: describablefunction): void {
-    console.log("function description is" + fn.description + " returned" + fn(6));
+    console.log('function description is ' + ' ' + fn.description + ' ' + 'returned' + ' '  + fn(6));
   }
   myfunc(a);  
-
-function greeter(fn: (a: string) => void): void {
-  fn("hello world");
+// function example 2
+type desirablefunction = {
+  description: string
+  (value: number): boolean
 }
-function writetoconsole(str: string) {
-  console.log(str);
-}
-greeter(writetoconsole);
-
+const getresults: desirablefunction = (a) => a > 6   
+getresults.description = 'function returns boolean'
+console.log(getresults(6))
