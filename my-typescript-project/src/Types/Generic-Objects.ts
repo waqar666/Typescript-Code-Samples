@@ -1,4 +1,4 @@
-//typescript Type Narrowing and Type Guard
+//typescript Type Narrowing and Type Guard with generic objects
 interface GenericObject<T> {
   [key: string]: T | object | address;
 }
